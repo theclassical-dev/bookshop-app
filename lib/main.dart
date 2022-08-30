@@ -1,4 +1,5 @@
 import 'package:bookshop/screens/bottom_bar.dart';
+import 'package:bookshop/screens/welcome_screen.dart';
 import 'package:bookshop/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: primary,
       ),
 
-      home: const BottomBar(),
+      home: const WelcomeScreen(),
     );
   }
 }
