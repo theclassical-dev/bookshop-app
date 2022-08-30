@@ -1,4 +1,5 @@
 import 'package:bookshop/screens/bottom_bar.dart';
+import 'package:bookshop/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
      debugShowCheckedModeBanner: false,
       title: 'Book Shop',
       theme: ThemeData(
-        primaryColor: Colors.amber
+        primaryColor: primary,
       ),
 
       home: const BottomBar(),
