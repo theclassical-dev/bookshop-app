@@ -23,9 +23,9 @@ class TopLogoWidget extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("BookShop", style: Styles.headLineStyle2.copyWith(color: isColor==null ? Colors.white : Colors.black54)),
+            Text("BookShop", style: Styles.headLineStyle2.copyWith(color: isColor==null ? Colors.white : Colors.black)),
             Text("Best The Best In You...", style: Styles.textStyle.copyWith(
-                fontWeight: FontWeight.w500, fontSize: 10, color: isColor==null ? Colors.white: Colors.black54,
+                fontWeight: FontWeight.w500, fontSize: 10, color: isColor==null ? Colors.white: Colors.black,
             )),
 
           ],

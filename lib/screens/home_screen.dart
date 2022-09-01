@@ -1,10 +1,12 @@
 import 'package:bookshop/widgets/app_category_list.dart';
+import 'package:bookshop/widgets/app_most_rated_widget.dart';
 import 'package:bookshop/widgets/book_list.dart';
 import 'package:bookshop/widgets/top_logo_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 
 import '../utils/app_info.dart';
 import '../utils/app_layout.dart';
@@ -25,7 +27,14 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Gap(40),
-                const TopLogoWidget(isColor: false, alignment: MainAxisAlignment.start,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const TopLogoWidget(isColor: false, alignment: MainAxisAlignment.start,),
+                    Icon(FluentSystemIcons.ic_fluent_bookmark_filled),
+                  ],
+                ),
+
                 Gap(AppLayout.getHeight(30)),
                 Container(
                   // height: AppLayout.getHeight(30),
@@ -87,7 +96,26 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 Gap(AppLayout.getHeight(30)),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                        Gap(AppLayout.getHeight(5)),
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                      ],
+                    ),
+                    Gap(AppLayout.getHeight(10)),
+                    Row(
+                      children: [
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                        Gap(AppLayout.getHeight(5)),
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                      ],
+                    ),
 
+                  ],
+                )
               ],
             ),
           )
