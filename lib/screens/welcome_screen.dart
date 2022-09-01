@@ -1,3 +1,5 @@
+import 'package:bookshop/screens/bottom_bar.dart';
+import 'package:bookshop/widgets/round_book_icon.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,15 +14,15 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Styles.bgColor,
+      backgroundColor: Colors.blue,
       body: ListView(
-            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(100), vertical: AppLayout.getHeight(400)),
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(80), vertical: AppLayout.getHeight(400)),
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     child: Icon(FluentSystemIcons.ic_fluent_access_time_filled, color: Colors.white, size: 40,),
                   ),
                   Gap(AppLayout.getHeight(12)),
@@ -33,9 +35,34 @@ class WelcomeScreen extends StatelessWidget {
                       )),
 
                     ],
-                  )
+                  ),
                 ],
               ),
+              Gap(AppLayout.getHeight(30)),
+              Row(
+                children: [
+                  const BookIcon(icon: FluentSystemIcons.ic_fluent_book_formula_text_regular,),
+                  Gap(AppLayout.getHeight(10)),
+                  const BookIcon(icon: FluentSystemIcons.ic_fluent_book_formula_text_regular,),
+                  Gap(AppLayout.getHeight(10)),
+                  const BookIcon(icon: FluentSystemIcons.ic_fluent_book_formula_text_regular,),
+                ],
+              ),
+              Gap(AppLayout.getHeight(30)),
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.white
+                ),
+                child: GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const BottomBar()));
+                  },
+                  child: Center(child: Text("Get Started",
+                    style: Styles.textStyle.copyWith(color: Colors.blue),)),
+                ),
+              )
             ],
           ),
     );
