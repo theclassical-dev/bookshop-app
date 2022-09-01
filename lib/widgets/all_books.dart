@@ -5,9 +5,9 @@ import 'package:gap/gap.dart';
 import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 
-class Books extends StatelessWidget {
+class AllBooks extends StatelessWidget {
   final Map<String, dynamic> book;
-  const Books({Key? key, required this.book}) : super(key: key);
+  const AllBooks({Key? key, required this.book}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +18,15 @@ class Books extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15), vertical: AppLayout.getWeight(17)),
       margin: const EdgeInsets.only(right: 17, top: 5),
       decoration: BoxDecoration(
-        color: Colors.blueGrey,
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.shade200,
-            blurRadius: 20,
-            spreadRadius: 5
-          )
-        ]
+          color: Colors.blueGrey,
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey.shade200,
+                blurRadius: 20,
+                spreadRadius: 5
+            )
+          ]
       ),
       child: Column(
         children: [
@@ -46,17 +46,17 @@ class Books extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(book['title'], style: Styles.headLineStyle3.copyWith(
-                  color: Colors.white
-              ),),
+                      color: Colors.white
+                  ),),
                   Text(book['author'], style: Styles.headLineStyle4.copyWith(
-                    color: Colors.white
+                      color: Colors.white
                   ),),
                   Text("\$${book['price']}", style: Styles.headLineStyle4.copyWith(
-                    color: Colors.amberAccent
+                      color: Colors.amberAccent
                   ),)
                 ],
               )
-              ],
+            ],
           ),
         ],
       ),

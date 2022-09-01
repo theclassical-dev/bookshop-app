@@ -59,15 +59,19 @@ List<Map<String, dynamic>> authorList = [
 
 List<Map<String, dynamic>> categoryList = [
   {
-    'name':'Romantic'
+    'name':'Romantic',
+    'amount': '500+'
   },
   {
-    'name':'Psychological'
+    'name':'Psychological',
+    'amount': '500+'
   },
   {
-    'name':'Friendly'
+    'name':'Friendly',
+    'amount': '500+'
   },
   {
-    'name':'History'
+    'name':'History',
+    'amount': '500+'
   }
 ];

@@ -1,3 +1,4 @@
+import 'package:bookshop/widgets/app_category_list.dart';
 import 'package:bookshop/widgets/book_list.dart';
 import 'package:bookshop/widgets/top_logo_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: ListView(
@@ -56,7 +58,35 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                       children: latestList.map((singleBook) => Books(book: singleBook)).toList()
                   ),
-                )
+                ),
+                Gap(AppLayout.getHeight(30)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Book Categories", style: Styles.headLineStyle3.copyWith(
+                        fontWeight: FontWeight.bold, fontSize: 18
+                    )),
+                  ],
+                ),
+                Gap(AppLayout.getHeight(25)),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.only(left: 15),
+                  child:Row(
+                      children: categoryList.map((singleCategory) => CategoryList(category: singleCategory,)).toList()
+                  ),
+                ),
+                Gap(AppLayout.getHeight(30)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Most Rated Books", style: Styles.headLineStyle3.copyWith(
+                      fontWeight: FontWeight.bold, fontSize: 18
+                    )),
+
+                  ],
+                ),
+                Gap(AppLayout.getHeight(30)),
 
               ],
             ),
