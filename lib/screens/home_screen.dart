@@ -100,17 +100,17 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay",category: "mind", price: "\$700"),
                         Gap(AppLayout.getHeight(5)),
-                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", category: "psychology", price: "\$700"),
                       ],
                     ),
                     Gap(AppLayout.getHeight(10)),
                     Row(
                       children: [
-                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay",category: "Thinking", price: "\$700"),
                         Gap(AppLayout.getHeight(5)),
-                        const MostRatedBook(title: "Mind Walker", author: "Van Jay", price: "\$700"),
+                        const MostRatedBook(title: "Mind Walker", author: "Van Jay",category: "Romance",price: "\$700"),
                       ],
                     ),
 

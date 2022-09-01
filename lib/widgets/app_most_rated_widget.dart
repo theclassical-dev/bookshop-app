@@ -9,7 +9,9 @@ class MostRatedBook extends StatelessWidget {
   final String title;
   final String author;
   final String price;
-  const MostRatedBook({Key? key, required this.title, required this.author, required this.price}) : super(key: key);
+  final String category;
+
+  const MostRatedBook({Key? key, required this.title, required this.author, required this.price, required this.category}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class MostRatedBook extends StatelessWidget {
           width: size.width*0.44,
           height: AppLayout.getHeight(300),
           decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.blueGrey,
               borderRadius: BorderRadius.circular(AppLayout.getHeight(18))
           ),
           padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(15), horizontal: AppLayout.getHeight(15)),
@@ -43,9 +45,11 @@ class MostRatedBook extends StatelessWidget {
               Gap(AppLayout.getHeight(5)),
               Text(title, style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.bold,color: Colors.white ),),
               Gap(AppLayout.getHeight(5)),
-              Text(author, style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500,color: Colors.white, fontSize: 18 ),),
+              Text(author, style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500,color: Colors.white, fontSize: 16 ),),
               Gap(AppLayout.getHeight(5)),
-              Text(price, style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500,color: Colors.white, fontSize: 18 ),),
+              Text(category, style: Styles.headLineStyle4.copyWith(fontWeight: FontWeight.w500,color: Colors.white, fontSize: 14 ),),
+              Gap(AppLayout.getHeight(5)),
+              Text(price, style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500,color: Colors.amber, fontSize: 18 ),),
 
 
             ],

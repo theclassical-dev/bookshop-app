@@ -41,7 +41,7 @@ class CategoryList extends StatelessWidget {
               const Gap(10),
               Text(category['name'], style: Styles.textStyle.copyWith(color: Colors.white)),
               const Gap(10),
-              Text(category['amount'], style: Styles.textStyle.copyWith(color: Colors.white)),
+              Text(category['amount'], style: Styles.textStyle.copyWith(color: Colors.amber)),
             ],
           ),
         ),
