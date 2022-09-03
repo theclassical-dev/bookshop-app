@@ -12,54 +12,72 @@ class AllBooks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
-    return Container(
-      width: size.width*0.7,
-      height: AppLayout.getHeight(100),
-      padding: EdgeInsets.symmetric(horizontal: AppLayout.getHeight(15), vertical: AppLayout.getWeight(17)),
-      margin: const EdgeInsets.only(right: 17, top: 5),
-      decoration: BoxDecoration(
-          color: Colors.blueGrey,
-          borderRadius: BorderRadius.circular(24),
-          boxShadow: [
-            BoxShadow(
-                color: Colors.grey.shade200,
-                blurRadius: 20,
-                spreadRadius: 5
-            )
-          ]
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+    return Stack(
+      children: [
+        Container(
+          width: size.width*0.44,
+          height: AppLayout.getHeight(320),
+          margin: const EdgeInsets.only(right: 5,),
+          decoration: BoxDecoration(
+              color: Colors.blueGrey,
+              borderRadius: BorderRadius.circular(AppLayout.getHeight(18))
+          ),
+          padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(15), horizontal: AppLayout.getHeight(17)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: size.width*0.2,
-                height: AppLayout.getHeight(65),
+                height: AppLayout.getHeight(150),
                 decoration: BoxDecoration(
-                    color: Colors.black54,
-                    borderRadius: BorderRadius.circular(30)
+                  borderRadius: BorderRadius.circular(12),
+                  color: Styles.primaryColor,
+                  // image: DecorationImage(
+                  //     fit: BoxFit.cover,
+                  //     image: AssetImage(
+                  //         "assets/images/"
+                  //     )
+                  // )
                 ),
               ),
-              Gap(AppLayout.getHeight(8)),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(book['title'], style: Styles.headLineStyle3.copyWith(
-                      color: Colors.white
-                  ),),
-                  Text(book['author'], style: Styles.headLineStyle4.copyWith(
-                      color: Colors.white
-                  ),),
-                  Text("\$${book['price']}", style: Styles.headLineStyle4.copyWith(
-                      color: Colors.amberAccent
-                  ),)
-                ],
-              )
+              Gap(AppLayout.getHeight(5)),
+              Text(book['title'], style: Styles.headLineStyle3.copyWith(fontWeight: FontWeight.bold,color: Colors.white ),),
+              Gap(AppLayout.getHeight(5)),
+              Text(book['author'], style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500,color: Colors.white, fontSize: 16 ),),
+              Gap(AppLayout.getHeight(5)),
+              Text(book['category'], style: Styles.headLineStyle4.copyWith(fontWeight: FontWeight.w500,color: Colors.white, fontSize: 14 ),),
+              Gap(AppLayout.getHeight(5)),
+              Text("\$${book['price']}", style: Styles.headLineStyle2.copyWith(fontWeight: FontWeight.w500,color: Colors.amber, fontSize: 18 ),),
+
+
             ],
           ),
-        ],
-      ),
+        ),
+        Positioned(
+            right: -45,
+            top: -40,
+            child:  Container(
+              padding: EdgeInsets.all(AppLayout.getHeight(30) ),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 10, color: Colors.white),
+                  color: Colors.transparent
+              ),
+            )
+        ),
+        Positioned(
+            left: -45,
+            bottom: -40,
+            child:  Container(
+              padding: EdgeInsets.all(AppLayout.getHeight(30) ),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(width: 10, color: Colors.white),
+                  color: Colors.transparent
+              ),
+            )
+        ),
+
+      ],
     );
   }
 }

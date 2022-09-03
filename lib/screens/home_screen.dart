@@ -1,5 +1,6 @@
 import 'package:bookshop/widgets/app_category_list.dart';
 import 'package:bookshop/widgets/app_most_rated_widget.dart';
+import 'package:bookshop/widgets/app_search_icon.dart';
 import 'package:bookshop/widgets/book_list.dart';
 import 'package:bookshop/widgets/top_logo_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -36,21 +37,7 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 Gap(AppLayout.getHeight(30)),
-                Container(
-                  // height: AppLayout.getHeight(30),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white
-                  ),
-                  padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(12), horizontal: AppLayout.getHeight(12)),
-                  child: Row(
-                    children: [
-                      const Icon(FluentSystemIcons.ic_fluent_search_filled, color: Colors.orangeAccent,),
-                      Gap(AppLayout.getHeight(5)),
-                      const Text("search for books..")
-                    ],
-                  )
-                ),
+                const SearchIcon(),
                 Gap(AppLayout.getHeight(35)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

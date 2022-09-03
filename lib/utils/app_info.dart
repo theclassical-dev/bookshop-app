@@ -30,6 +30,14 @@ List<Map<String, dynamic>> bookList = [
     'image': '',
     'title': 'The Divine Comedy',
     'author': 'Dante Alighieri',
+    'category': 'mind',
+    'price': '499.99',
+  },
+  {
+    'image': '',
+    'title': 'The Divine Comedy',
+    'author': 'Dante Alighieri',
+    'category': 'Romance',
     'price': '499.99',
   }
 ];

@@ -1,3 +1,4 @@
+import 'package:bookshop/screens/books_screen.dart';
 import 'package:bookshop/screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,7 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
   static final List<Widget>_widgetOptions = <Widget>[
     const HomeScreen(),
-    const Text("books"),
+    const BooksScreen(),
     const Text("latest"),
     const Text("Authors"),
   ];
